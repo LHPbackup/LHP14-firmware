@@ -23,7 +23,10 @@ AUDIO_ENABLE = no          # Audio output on port C6
 
 SPLIT_KEYBOARD = no
 
+
 JOYSTICK_ENABLE = yes
 JOYSTICK_DRIVER = analog
+SRC += analog.c
 
+OLED_DRIVER_ENABLE = yes   # Enable support for OLED display
 OLED_ENABLE = yes

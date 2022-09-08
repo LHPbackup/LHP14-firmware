@@ -2,7 +2,6 @@
 #include "joystick.h"
 #include "analog.h"
 
-
 #define TST 0
 #define RGB 1
 
@@ -12,7 +11,10 @@
 
 
 
-
+void render_logo(void) {
+    oled_set_cursor(0, 0);
+    oled_write_P(lhp_logo, false);
+}
 
 enum custom_keycodes {
   RGBRST = SAFE_RANGE
@@ -33,11 +35,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 
-
-bool oled_task_user(void) {
-    oled_set_cursor(0, 0);
-    oled_write_P(lhp_logo, false);
-    oled_set_cursor(0, 3);
+void render_layer(void) {
+	
+	oled_set_cursor(START_COL, START_ROW);
     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer: "), false);
 
@@ -54,15 +54,14 @@ bool oled_task_user(void) {
             // Or use the write_ln shortcut over adding '\n' to the end of your string
             oled_write_ln_P(PSTR("Undefined"), false);
     }
+}
+
+bool oled_task_user(void) {
+    render_logo();
+    render_layer();
     return false;
 }
 
-
-
-
-void suspend_power_down_user(void) {
-    oled_off();
-}
 
 
 

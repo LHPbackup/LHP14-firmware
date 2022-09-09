@@ -196,6 +196,16 @@ bool oled_task_user(void) {
 
 
 
+void suspend_power_down_kb(void) {
+    oled_off();
+}
+
+void suspend_wakeup_init_kb(void) {
+    oled_on();
+}
+
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* DRK

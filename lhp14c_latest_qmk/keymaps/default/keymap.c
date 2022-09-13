@@ -2,6 +2,8 @@
 #include "joystick.h"
 #include "analog.h"
 
+
+// Layer(=job) MAX 32jobs available
 #define SAM 0
 #define SCH 1
 #define SGE 2

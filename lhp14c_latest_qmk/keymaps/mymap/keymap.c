@@ -2,6 +2,8 @@
 #include "joystick.h"
 #include "analog.h"
 
+
+// Layer(=job) MAX 32jobs available
 #define DRK 0
 #define GNB 1
 #define WAR 2
@@ -10,20 +12,20 @@
 #define SAM 5
 #define MNK 6
 #define NIN 7
-// #define BRD xx
-#define MCH 8
-#define DNC 9
-#define RDM 10
-#define SMN 11
-// #define BLM xx
-// #define BLU xx
-#define WHM 12
-#define SCH 13
-#define AST 14
-// #define GAT xx
-// #define CRA xx
+#define BRD 8
+#define MCH 9
+#define DNC 10
+#define RDM 11
+#define SMN 12
+#define BLM 13
+#define BLU 14
+#define WHM 15
+#define SCH 16
+#define AST 17
+#define GAT 18
+#define CRA 19
 
-#define RGB 15
+#define RGB 20
 
 
 
@@ -116,10 +118,10 @@ void render_layer(void) {
             rgblight_sethsv(191, 255, 150);
             break;
             
-//        case BRD:
-//            oled_write_P(PSTR("BARD\n"), false);
-//            rgblight_sethsv(91, 199, 140);
-//            break;
+        case BRD:
+            oled_write_P(PSTR("BARD\n"), false);
+            rgblight_sethsv(91, 199, 140);
+            break;
             
         case MCH:
             oled_write_P(PSTR("MACHINIST\n"), false);
@@ -141,15 +143,15 @@ void render_layer(void) {
             rgblight_sethsv(20, 255, 100);
             break;
             
-//        case BLM:
-//            oled_write_P(PSTR("BLACK MAGE\n"), false);
-//            rgblight_sethsv(68, 15, 50);
-//            break;
+        case BLM:
+            oled_write_P(PSTR("BLACK MAGE\n"), false);
+            rgblight_sethsv(68, 15, 50);
+            break;
             
-//        case BLU:
-//            oled_write_P(PSTR("BLUE MAGE\n"), false);
-//            rgblight_sethsv(170, 255, 200);
-//            break;
+        case BLU:
+            oled_write_P(PSTR("BLUE MAGE\n"), false);
+            rgblight_sethsv(170, 255, 200);
+            break;
             
         case WHM:
             oled_write_P(PSTR("WHITE MAGE\n"), false);
@@ -166,15 +168,15 @@ void render_layer(void) {
             rgblight_sethsv(127, 255, 180);
             break;
 
-//        case GAT:
-//            oled_write_P(PSTR("GATHERER\n"), false);
-//            rgblight_sethsv(68, 130, 190);
-//            break;
+        case GAT:
+            oled_write_P(PSTR("GATHERER\n"), false);
+            rgblight_sethsv(68, 130, 190);
+            break;
             
-//        case CRA:
-//            oled_write_P(PSTR("CRAFTER\n"), false);
-//            rgblight_sethsv(198, 130, 190);
-//            break;
+        case CRA:
+            oled_write_P(PSTR("CRAFTER\n"), false);
+            rgblight_sethsv(198, 130, 190);
+            break;
 
         case RGB:
             oled_write_P(PSTR("RGB LED TEST\n"), false);
@@ -387,7 +389,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------|   
    * |      |      |      |      |      |      |      |   
    * |------+------+------+------+------+------+------|   
-   * |      |      |      |      |      |      | MCH  |   
+   * |      |      |      |      |      |      | BRD  |   
    * |------+------+------+------+------+-------------'   
    * |      |      |      |      |      |                 
    * `----------------------------------+-------------.   
@@ -400,7 +402,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [NIN] = LAYOUT( \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
-    XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 TO(MCH),   \
+    XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 TO(BRD),   \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,							\
     															 XXXXXXX,	 JS_BUTTON0,\
     																		 XXXXXXX    \
@@ -421,7 +423,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                                           |      |   
    *                                           `------'   
    */
-/*
+
   [BRD] = LAYOUT( \
    XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
    XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
@@ -430,7 +432,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     														 XXXXXXX,	 JS_BUTTON0,\
     																	 XXXXXXX    \
    ),
-*/
+
 
   /* MCH
    * ,------------------------------------------------.   
@@ -512,7 +514,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------|   
    * |      |      |      |      |      |      |      |   
    * |------+------+------+------+------+------+------|   
-   * |      |      |      |      |      |      | WHM  |   
+   * |      |      |      |      |      |      | BLM  |   
    * |------+------+------+------+------+-------------'   
    * |      |      |      |      |      |                 
    * `----------------------------------+-------------.   
@@ -525,7 +527,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [SMN] = LAYOUT( \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
-    XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 TO(WHM),   \
+    XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 TO(BLM),   \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,							\
     															 XXXXXXX,	 JS_BUTTON0,\
     																		 XXXXXXX    \
@@ -546,7 +548,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                                           |      |   
    *                                           `------'   
    */
-/*
+
    [BLM] = LAYOUT( \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
@@ -555,7 +557,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     															 XXXXXXX,	 JS_BUTTON0,\
     																		 XXXXXXX    \
    ),
-*/
+
 
   /* BLU
    * ,------------------------------------------------.   
@@ -572,7 +574,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                                           |      |   
    *                                           `------'   
    */
- /*
+
    [BLU] = LAYOUT( \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
@@ -581,7 +583,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     															 XXXXXXX,	 JS_BUTTON0,\
     																		 XXXXXXX    \
    ),
-*/
+
 
   /* WHM
    * ,------------------------------------------------.   
@@ -639,7 +641,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------|   
    * |      |      |      |      |      |      |      |   
    * |------+------+------+------+------+------+------|   
-   * |      |      |      |      |      |      | RGB  |   
+   * |      |      |      |      |      |      | GAT  |   
    * |------+------+------+------+------+-------------'   
    * |      |      |      |      |      |                 
    * `----------------------------------+-------------.   
@@ -652,7 +654,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [AST] = LAYOUT( \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
-    XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 TO(RGB),   \
+    XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 TO(GAT),   \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,							\
     															 XXXXXXX,	 JS_BUTTON0,\
     																		 XXXXXXX    \
@@ -673,7 +675,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                                           |      |   
    *                                           `------'   
    */
-/*
+
    [GAT] = LAYOUT( \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
@@ -682,7 +684,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     															 XXXXXXX,	 JS_BUTTON0,\
     																		 XXXXXXX    \
    ),
-*/
+
 
   /* CRA
    * ,------------------------------------------------.   
@@ -700,7 +702,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                                           `------'   
    */
    
-/*
+
    [CRA] = LAYOUT( \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
     XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,	 XXXXXXX,   \
@@ -709,7 +711,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     															 XXXXXXX,	 JS_BUTTON0,\
     																		 XXXXXXX    \
    ),
-*/
+
 
   /* RGB
    * ,------------------------------------------------.   

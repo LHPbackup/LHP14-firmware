@@ -1,5 +1,11 @@
 {
   "keyboard_name": "LHP14f",
+  "manufacturer": "NeoTrinity",
+  "usb":{
+      "vid": "0xFF14",
+      "pid": "0x0009",
+      "device_version": "0.0.1"
+  },
   "url": "",
   "maintainer": "qmk",
   "width": 7,

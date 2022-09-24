@@ -23,6 +23,16 @@
 
 
 
+bool repeat_sd = false;		//Global repeat variable
+static uint16_t timer_sd;	//Global timer variable
+bool repeat_jp = false;
+static uint16_t timer_jp;
+bool repeat_dd = false;
+static uint16_t timer_dd;
+
+
+
+
 
 void render_logo(void) {
     oled_set_cursor(0, 0);
@@ -34,11 +44,15 @@ enum custom_keycodes {
   HC_HB,
   SE_SH,
   RGBRST,
-  TK_GG
+  TK_GG,
+  RPT_SD,
+  RPT_JP,
+  RPT_DD,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
+    
     case AC_PH:
       if (record->event.pressed) {
          register_code(KC_LALT);
@@ -47,6 +61,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
            SEND_STRING(SS_DELAY(10) ")" SS_DELAY(10));
       }
       break;
+    
     case HC_HB:
       if (record->event.pressed) {
          register_code(KC_LALT);
@@ -55,6 +70,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          unregister_code(KC_LALT);
       }
       break;
+    
     case SE_SH:
       if (record->event.pressed) {
          register_code(KC_LALT);
@@ -63,6 +79,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          unregister_code(KC_LALT);
       }
       break;
+    
     case RGBRST:
       #ifdef RGBLIGHT_ENABLE
         if (record->event.pressed) {
@@ -71,6 +88,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         }
       #endif
       break;
+    
     case TK_GG:
       if (record->event.pressed) {
          register_code(KC_LALT);
@@ -79,9 +97,75 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
          unregister_code(KC_LALT);
       }
       break;
+    
+    case RPT_SD:
+      if (record->event.pressed) {				//When key is pressed
+            tap_code(KC_EQL);					//Type key you want to repeat (in this case =)
+            repeat_sd = true;					//Set "repeat_sp" to true
+            timer_sd = timer_read();				//Start timer
+         } else {						//Else key is released
+            repeat_sd = false;					//Set "repeat_sp" to false
+         }
+        return false;
+      break;
+      
+      case RPT_JP:
+      if (record->event.pressed) {
+            tap_code(KC_MINS);
+            repeat_jp = true;
+            timer_jp = timer_read();
+         } else {
+            repeat_jp = false;
+         }
+        return false;
+      break;
+      
+      case RPT_DD:
+      if (record->event.pressed) {
+            tap_code(KC_0);
+            repeat_dd = true;
+            timer_dd = timer_read();
+         } else {
+            repeat_dd = false;
+         }
+        return false;
+      break;
+      
   }
   return true;
 }
+
+
+
+
+joystick_config_t joystick_axes[JOYSTICK_AXES_COUNT] = {
+    [0] = JOYSTICK_AXIS_VIRTUAL,
+    [1] = JOYSTICK_AXIS_VIRTUAL
+};
+
+void matrix_scan_user(void) {
+
+    joystick_status.axes[0] = analogReadPin(F4)/4 - 128;
+    joystick_status.axes[1] = analogReadPin(D4)/4 - 128;
+    joystick_status.status |= JS_UPDATED;
+
+    if ((repeat_sd) && (timer_elapsed(timer_sd) > 50)) {		//If "repeat_sd" is true and 50 ms has elapsed
+       tap_code(KC_EQL);						//Type key you want to repeat
+       timer_sd = timer_read();						//Reset timer (also could do with modulus % and not resetting timer, unsure which is faster)
+    }
+    
+    if ((repeat_jp) && (timer_elapsed(timer_jp) > 100)) {
+       tap_code(KC_MINS);
+       timer_jp = timer_read();
+    }
+    
+    if ((repeat_dd) && (timer_elapsed(timer_dd) > 150)) {
+       tap_code(KC_0);
+       timer_dd = timer_read();
+    }
+    
+}
+
 
 
 void render_layer(void) {
@@ -118,7 +202,7 @@ void render_layer(void) {
             
         case DRG:
             oled_write_P(PSTR("DRAGOON\n"), false);
-            rgblight_sethsv(170, 255, 180);
+            rgblight_sethsv(170, 255, 10);
             break;
             
         case DRK:
@@ -165,6 +249,7 @@ void render_layer(void) {
             oled_write_ln_P(PSTR("Undefined"), false);
     }
 }
+
 
 bool oled_task_user(void) {
     render_logo();
@@ -316,11 +401,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,------------------------------------------------.   
    * |ｺﾝact1|ﾀｹﾞST |  W   |ﾄｩﾙｰN |ｽﾊﾟｲﾝD|ﾀｹﾞMT |ﾘﾀﾆｰ  |   
    * |------+------+------+------+------+------+------|   
-   * |   A  |      |Space |ﾀｹﾞ替 |ﾀｹﾞ近 |ｼﾞｬﾝﾌﾟ|  D   |   
+   * |  A   |      |Space |ﾀｹﾞ替 |ﾀｹﾞ近 |ｼﾞｬﾝﾌﾟ|  D   |   
    * |------+------+------+------+------+------+------|   
    * |      |ｺﾝact1|蒼竜血|ｱﾑﾚﾝ  |Dﾀﾞｲﾌﾞ| 薬1  |      |   
    * |------+------+------+------+------+-------------'   
-   * |      |      |      |   S  |ｲﾙｰｼﾌﾞ|      | DRK  |   
+   * |RPT_SD|RPT_JP|RPT_DD|  S   |ｲﾙｰｼﾌﾞ|      | DRK  |   
    * `----------------------------------+-------------.   
    *                                    |ﾘﾀﾆｰ  |JSPush|   
    *                                    `------+------.   
@@ -331,7 +416,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Z,     KC_F2,     KC_W,       LALT(KC_1), KC_EQUAL,  KC_F1,      LALT(KC_6),\
     KC_A,     XXXXXXX,   KC_SPC,     KC_F,       KC_T,      KC_MINUS,   KC_D,      \
     XXXXXXX,  KC_Z,      LALT(KC_9), KC_ASTR,    KC_0,      LCA(KC_0),  XXXXXXX,   \
-    XXXXXXX,  XXXXXXX,   XXXXXXX,    KC_S,       LALT(KC_7),            TO(DRK),   \
+    RPT_SD,   RPT_JP,    RPT_DD,     KC_S,       LALT(KC_7),            TO(DRK),   \
                                                             LALT(KC_6), JS_BUTTON0,\
                                                                         KC_F12     \
   ),
@@ -531,20 +616,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
-
-
-
-joystick_config_t joystick_axes[JOYSTICK_AXES_COUNT] = {
-    [0] = JOYSTICK_AXIS_VIRTUAL,
-    [1] = JOYSTICK_AXIS_VIRTUAL
-};
-
-void matrix_scan_user(void) {
-
-    joystick_status.axes[0] = analogReadPin(F4)/4 - 128;
-    joystick_status.axes[1] = analogReadPin(D4)/4 - 128;
-    joystick_status.status |= JS_UPDATED;
-}
 
 
 

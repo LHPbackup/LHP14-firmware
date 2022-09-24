@@ -29,7 +29,8 @@ bool repeat_jp = false;
 static uint16_t timer_jp;
 bool repeat_dd = false;
 static uint16_t timer_dd;
-
+bool repeat_pot = false;
+static uint16_t timer_pot;
 
 
 
@@ -48,6 +49,7 @@ enum custom_keycodes {
   RPT_SD,
   RPT_JP,
   RPT_DD,
+  RPT_POT,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -74,8 +76,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case SE_SH:
       if (record->event.pressed) {
          register_code(KC_LALT);
-           SEND_STRING(SS_DELAY(10) "4" SS_DELAY(10));
-           SEND_STRING(SS_DELAY(10) "9" SS_DELAY(10));
+           tap_code_delay(KC_4,10);
+           tap_code_delay(KC_9,10);
          unregister_code(KC_LALT);
       }
       break;
@@ -131,6 +133,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
       break;
       
+      case RPT_POT:
+      if (record->event.pressed) {
+            repeat_pot = true;
+            timer_pot = timer_read();
+         } else {
+            repeat_pot = false;
+         }
+        return false;
+      break;
   }
   return true;
 }
@@ -150,20 +161,26 @@ void matrix_scan_user(void) {
     joystick_status.status |= JS_UPDATED;
 
     if ((repeat_sd) && (timer_elapsed(timer_sd) > 50)) {		//If "repeat_sd" is true and 50 ms has elapsed
-       tap_code(KC_EQL);						//Type key you want to repeat
+         tap_code(KC_EQL);						//Type key you want to repeat
        timer_sd = timer_read();						//Reset timer (also could do with modulus % and not resetting timer, unsure which is faster)
     }
     
     if ((repeat_jp) && (timer_elapsed(timer_jp) > 100)) {
-       tap_code(KC_MINS);
+         tap_code(KC_MINS);
        timer_jp = timer_read();
     }
     
     if ((repeat_dd) && (timer_elapsed(timer_dd) > 150)) {
-       tap_code(KC_0);
+         tap_code(KC_0);
        timer_dd = timer_read();
     }
     
+    if ((repeat_pot) && (timer_elapsed(timer_pot) > 100)) {
+         register_code(KC_LALT);
+           tap_code_delay(KC_0,10);
+         unregister_code(KC_LALT);
+       timer_dd = timer_read();
+    }
 }
 
 
@@ -242,9 +259,9 @@ void render_layer(void) {
             
         case RGB:
             oled_write_P(PSTR("RGB LED TEST\n"), false);
-            break;     
+            break;
+            
         default:
-        
             // Or use the write_ln shortcut over adding '\n' to the end of your string
             oled_write_ln_P(PSTR("Undefined"), false);
     }
@@ -291,7 +308,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [SAM] = LAYOUT( \
     KC_Z,        KC_F2,     KC_W,        LALT(KC_1),LALT(KC_4),   KC_PLUS,    KC_V,      \
     KC_A,        KC_HASH,   KC_SPC,      KC_F,      KC_T,         SE_SH,      KC_D,      \
-    KC_HASH,     LALT(KC_5),LALT(KC_2),  KC_AMPR,   KC_ASTR,      LALT(KC_0), XXXXXXX,   \
+    KC_HASH,     LALT(KC_5),LALT(KC_2),  KC_AMPR,   KC_ASTR,      RPT_POT,    XXXXXXX,   \
     LCA(KC_MINS),XXXXXXX,   LCA(KC_MINS),KC_S,      LALT(KC_MINS),            TO(SCH),   \
                                                                   LALT(KC_3), KC_HASH,   \
                                                                               KC_F12     \

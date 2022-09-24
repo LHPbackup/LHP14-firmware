@@ -1,0 +1,21 @@
+{
+  "keyboard_name": "FootSwitch_RP2040",
+  "manufacturer": "NeoTrinity",
+  "usb":{
+      "vid": "0xFF14",
+      "pid": "0x0021",
+      "device_version": "0.0.1"
+  },
+  "url": "",
+  "maintainer": "qmk",
+
+
+  "layouts": {
+    "LAYOUT": {
+
+      "layout": [{"x":0, "y":0}, {"x":1, "y":0}, {"x":2, "y":0}, 
+
+      ]
+    }
+  }
+}

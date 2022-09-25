@@ -103,10 +103,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case RPT_SD:
       if (record->event.pressed) {				//When key is pressed
             tap_code(KC_EQL);					//Type key you want to repeat (in this case =)
-            repeat_sd = true;					//Set "repeat_sp" to true
+            repeat_sd = true;					//Set "repeat_sd" to true
             timer_sd = timer_read();				//Start timer
          } else {						//Else key is released
-            repeat_sd = false;					//Set "repeat_sp" to false
+            repeat_sd = false;					//Set "repeat_sd" to false
          }
         return false;
       break;

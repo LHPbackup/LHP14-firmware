@@ -242,7 +242,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(GNB),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -267,7 +267,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(WAR),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -291,7 +291,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(PLD),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -316,7 +316,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(DRG),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -341,7 +341,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(SAM),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -366,7 +366,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(MNK),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -390,7 +390,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(NIN),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -415,7 +415,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(RPR),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -440,7 +440,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(BRD),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -465,7 +465,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(MCH),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -490,7 +490,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(DNC),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -514,7 +514,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(RDM),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -539,7 +539,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(SMN),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -564,7 +564,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(BLM),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -589,7 +589,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(BLU),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -614,7 +614,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(WHM),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -639,7 +639,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(SCH),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -664,7 +664,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(AST),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -689,7 +689,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(SGE),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -714,7 +714,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(GAT),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -739,7 +739,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(CRA),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -764,7 +764,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,              TO(RGB),   \
-                                                           XXXXXXX,   JS_BUTTON0,\
+                                                           XXXXXXX,   JS_0,      \
                                                                       XXXXXXX    \
    ),
 
@@ -789,7 +789,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_MOD,    RGBRST,    XXXXXXX,    XXXXXXX,    XXXXXXX,     XXXXXXX,    XXXXXXX,   \
     XXXXXXX,    XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,     XXXXXXX,    XXXXXXX,   \
     XXXXXXX,    XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,                 TO(DRK),   \
-                                                                XXXXXXX,    JS_BUTTON0,\
+                                                                XXXXXXX,    JS_0,      \
                                                                             XXXXXXX    \
   ),
 
@@ -800,16 +800,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 
-joystick_config_t joystick_axes[JOYSTICK_AXES_COUNT] = {
-    [0] = JOYSTICK_AXIS_VIRTUAL,
-    [1] = JOYSTICK_AXIS_VIRTUAL
+joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
+     JOYSTICK_AXIS_VIRTUAL, // x
+     JOYSTICK_AXIS_VIRTUAL  // y
 };
 
 void matrix_scan_user(void) {
 
-    joystick_status.axes[0] = analogReadPin(F4)/4 - 128;
-    joystick_status.axes[1] = analogReadPin(D4)/4 - 128;
-    joystick_status.status |= JS_UPDATED;
+    joystick_set_axis(0,analogReadPin(F4)/4 - 128);
+    joystick_set_axis(1,analogReadPin(D4)/4 - 128);
+
 }
 
 

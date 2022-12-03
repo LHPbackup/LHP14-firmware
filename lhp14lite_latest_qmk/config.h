@@ -22,11 +22,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID      0xFF14
-#define PRODUCT_ID     0x0007
-#define DEVICE_VER     0x0001
-#define MANUFACTURER   NeoTrinity
-#define PRODUCT        LHP14Lite
+// #define VENDOR_ID      0xFF14
+// #define PRODUCT_ID     0x0007
+// #define DEVICE_VER     0x0001
+// #define MANUFACTURER   NeoTrinity
+// #define PRODUCT        LHP14Lite
 
 
 #define MATRIX_ROWS 4
@@ -71,7 +71,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 #define JOYSTICK_BUTTON_COUNT 1
-#define JOYSTICK_AXES_COUNT 2
+#define JOYSTICK_AXIS_COUNT 2
 
 #define OLED_TIMEOUT 0
 

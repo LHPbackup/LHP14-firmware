@@ -150,14 +150,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Z,       KC_W,         LALT(KC_1), LALT(KC_4), KC_D,       \
     KC_A,       KC_SPC,       KC_F,       KC_T,       LALT(KC_9), \
     LALT(KC_5), LALT(KC_2),   KC_AMPR,    KC_ASTR,    LALT(KC_0), \
-    TO(SCH),    LCA(KC_MINS), KC_S,       LALT(KC_7), LALT(KC_3),    JS_BUTTON0 \
+    TO(SCH),    LCA(KC_MINS), KC_S,       LALT(KC_7), LALT(KC_3),    JS_0\
   ),
 
 /* [SAM] = LAYOUT( \
     KC_Q,     KC_W,     KC_E,       KC_R,     KC_T,      \
     KC_A,     KC_S,     KC_D,       KC_F,     KC_G,      \
     KC_1,     KC_Z,     KC_X,       KC_C,     KC_V,      \
-    TO(SCH),  KC_3,     KC_5,       KC_6,     KC_7,         JS_BUTTON0 \
+    TO(SCH),  KC_3,     KC_5,       KC_6,     KC_7,         JS_0\
   ),*/
 
 
@@ -178,7 +178,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LCA(KC_5), KC_W,       KC_ASTR,    XXXXXXX,    LALT(KC_3),  \
     XXXXXXX,   KC_SPC,     KC_F,       KC_T,       LALT(KC_4),  \
     KC_Z,      LALT(KC_6), LALT(KC_5), LALT(KC_1), LCA(KC_7) ,  \
-    TO(DRG),   XXXXXXX,    KC_S,       KC_7,       SR_CS,         JS_BUTTON0 \
+    TO(DRG),   XXXXXXX,    KC_S,       KC_7,       SR_CS,         JS_0\
   ),
 
   /* DRG
@@ -196,7 +196,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Z,     KC_W,       LALT(KC_1), KC_EQUAL,   KC_D,      \
     KC_A,     KC_SPC,     KC_F,       KC_T,       KC_MINUS,  \
     XXXXXXX,  LALT(KC_9), KC_ASTR,    KC_0,       LCA(KC_0), \
-    TO(DRK),  XXXXXXX,    KC_S,       LALT(KC_7), LALT(KC_6),     JS_BUTTON0 \
+    TO(DRK),  XXXXXXX,    KC_S,       LALT(KC_7), LALT(KC_6),     JS_0\
   ),
 
   /* DRK
@@ -214,7 +214,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LCA(KC_EQL), XXXXXXX,      KC_LPRN,    LALT(KC_1), LCA(KC_3),  \
     KC_Z,        KC_SPC,       KC_F,       KC_T,       LALT(KC_2), \
     XXXXXXX,     LALT(KC_EQL), LALT(KC_6), LALT(KC_3), XXXXXXX,    \
-    TO(WAR),     XXXXXXX,      XXXXXXX,    LALT(KC_4), XXXXXXX,     JS_BUTTON0 \
+    TO(WAR),     XXXXXXX,      XXXXXXX,    LALT(KC_4), XXXXXXX,     JS_0\
   ),
 
   /* WAR
@@ -232,7 +232,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LCA(KC_EQL), KC_PLUS,      KC_LPRN,    XXXXXXX,    LCA(KC_3),  \
     XXXXXXX,     KC_SPC,       KC_F,       KC_T,       LALT(KC_3), \
     XXXXXXX,     LALT(KC_UNDS),LALT(KC_9), LALT(KC_5), XXXXXXX,    \
-    TO(DNC),     XXXXXXX,      XXXXXXX,    LALT(KC_1), XXXXXXX,     JS_BUTTON0 \
+    TO(DNC),     XXXXXXX,      XXXXXXX,    LALT(KC_1), XXXXXXX,     JS_0\
   ),
 
   /* DNC
@@ -250,7 +250,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  XXXXXXX,   KC_EQUAL,   XXXXXXX,   KC_F1,   \
     XXXXXXX,  KC_SPC,    KC_F,       KC_T,      KC_8,    \
     KC_Z,     KC_LPRN,   LALT(KC_5), KC_AMPR,   XXXXXXX, \
-    TO(WHM),  XXXXXXX,   XXXXXXX,    KC_ASTR,   KC_MINUS,     JS_BUTTON0 \
+    TO(WHM),  XXXXXXX,   XXXXXXX,    KC_ASTR,   KC_MINUS,     JS_0\
   ),
 
   /* WHM
@@ -268,7 +268,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Z,       KC_W,       LALT(KC_EQUAL),LALT(KC_5),    LALT(KC_4), \
     XXXXXXX,    KC_SPC,     KC_F,          KC_T,          LALT(KC_8), \
     XXXXXXX,    LALT(KC_0), LALT(KC_6),    LALT(KC_MINUS),XXXXXXX,    \
-    TO(RDM),    XXXXXXX,    XXXXXXX,       LALT(KC_7),    XXXXXXX,      JS_BUTTON0 \
+    TO(RDM),    XXXXXXX,    XXXXXXX,       LALT(KC_7),    XXXXXXX,      JS_0\
   ),
 
   /* RDM
@@ -286,7 +286,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Z,        XXXXXXX,    LALT(KC_4), XXXXXXX,    KC_F1,      \
     XXXXXXX,     KC_SPC,     KC_F,       KC_T,       LALT(KC_3), \
     XXXXXXX,     LALT(KC_9), KC_ASTR,    LALT(KC_5), LALT(KC_2), \
-    TO(NIN),     XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_Z,          JS_BUTTON0 \
+    TO(NIN),     XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_Z,          JS_0\
   ),
 
   /* NIN
@@ -304,7 +304,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   KC_W,       LALT(KC_3), XXXXXXX,    KC_F1,      \
     XXXXXXX,   KC_SPC,     KC_F,       KC_T,       LALT(KC_2), \
     LALT(KC_0),LALT(KC_7), LALT(KC_4), LALT(KC_1), XXXXXXX,    \
-    TO(RGB),   XXXXXXX,    XXXXXXX,    KC_9,       XXXXXXX,       JS_BUTTON0 \
+    TO(RGB),   XXXXXXX,    XXXXXXX,    KC_9,       XXXXXXX,       JS_0\
   ),
 
   /* RGB
@@ -322,7 +322,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_TOG,   RGB_HUI,   RGB_HUD,    RGB_SAI,    RGB_SAD, \
     RGB_MOD,   RGBRST,    RGB_VAI,    RGB_VAD,    XXXXXXX, \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX, \
-    TO(SAM),   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,    JS_BUTTON0 \
+    TO(SAM),   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,    JS_0\
   ),
 
 };
@@ -331,16 +331,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 
-joystick_config_t joystick_axes[JOYSTICK_AXES_COUNT] = {
-    [0] = JOYSTICK_AXIS_VIRTUAL,
-    [1] = JOYSTICK_AXIS_VIRTUAL
+joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
+     JOYSTICK_AXIS_VIRTUAL, // x
+     JOYSTICK_AXIS_VIRTUAL  // y
 };
 
 void matrix_scan_user(void) {
 
-    joystick_status.axes[0] = -(analogReadPin(D4)/4 - 128);
-    joystick_status.axes[1] = analogReadPin(F4)/4 - 128;
-    joystick_status.status |= JS_UPDATED;
+    joystick_set_axis(0,-(analogReadPin(D4)/4 - 128));
+    joystick_set_axis(1,analogReadPin(F4)/4 - 128);
+
 }
 
 

@@ -1,7 +1,7 @@
 {
   "keyboard_name": "LHP14f",
   "manufacturer": "NeoTrinity",
-  "usb":{
+  "usb": {
       "vid": "0xFF14",
       "pid": "0x0009",
       "device_version": "0.0.1"

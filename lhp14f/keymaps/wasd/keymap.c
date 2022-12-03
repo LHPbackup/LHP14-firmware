@@ -222,7 +222,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_A,      XXXXXXX,   KC_SPC,     KC_F,       KC_T,       LALT(KC_4), KC_D,      \
     XXXXXXX,   KC_Z,      LALT(KC_6), LALT(KC_5), LALT(KC_1), LCA(KC_7),  XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    KC_S,       KC_7,                   TO(SGE),   \
-                                                              LALT(KC_0), JS_BUTTON0,\
+                                                              LALT(KC_0), JS_0,      \
                                                                           KC_F12     \
   ),
 
@@ -246,7 +246,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     LCA(KC_8), LCA(KC_7), KC_SPC,     KC_F,       KC_T,       LALT(KC_4), KC_D,      \
     KC_A,      KC_Z,      LALT(KC_6), LALT(KC_5), LALT(KC_1), XXXXXXX,    XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    KC_S,       KC_UNDS,                TO(MNK),   \
-                                                              LALT(KC_0), JS_BUTTON0,\
+                                                              LALT(KC_0), JS_0,      \
                                                                           KC_F12     \
   ),
 
@@ -322,7 +322,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_A,     XXXXXXX,   KC_SPC,     KC_F,       KC_T,      KC_MINUS,   KC_D,      \
     XXXXXXX,  KC_Z,      LALT(KC_9), KC_ASTR,    KC_0,      LCA(KC_0),  XXXXXXX,   \
     XXXXXXX,  XXXXXXX,   XXXXXXX,    KC_S,       LALT(KC_7),            TO(DRK),   \
-                                                            LALT(KC_6), JS_BUTTON0,\
+                                                            LALT(KC_6), JS_0,      \
                                                                         KC_F12     \
   ),
 
@@ -370,7 +370,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,     XXXXXXX, KC_SPC,       KC_F,       KC_T,       LALT(KC_3), XXXXXXX,   \
     XXXXXXX,     XXXXXXX, LALT(KC_UNDS),LALT(KC_9), LALT(KC_5), XXXXXXX,    XXXXXXX,   \
     XXXXXXX,     XXXXXXX, XXXXXXX,      XXXXXXX,    LALT(KC_1),             TO(DNC),   \
-                                                                XXXXXXX,    JS_BUTTON0,\
+                                                                XXXXXXX,    JS_0,      \
                                                                             KC_F12     \
   ),
 
@@ -394,7 +394,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  XXXXXXX,   KC_SPC,    KC_F,       KC_T,      KC_8,    XXXXXXX,    \
     XXXXXXX,  KC_Z,      KC_LPRN,   LALT(KC_5), KC_AMPR,   XXXXXXX, XXXXXXX,    \
     XXXXXXX,  XXXXXXX,   XXXXXXX,   XXXXXXX,    KC_ASTR,            TO(MCH),    \
-                                                           KC_MINUS,JS_BUTTON0, \
+                                                           KC_MINUS,JS_0,       \
                                                                     KC_F12      \
   ),
 
@@ -418,7 +418,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  XXXXXXX,   KC_SPC,    KC_F,       KC_T,      KC_ASTR, XXXXXXX,    \
     XXXXXXX,  KC_Z,      LALT(KC_4),LALT(KC_5), HC_HB,     XXXXXXX, XXXXXXX,    \
     XXXXXXX,  XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,            TO(WHM),    \
-                                                           XXXXXXX, JS_BUTTON0, \
+                                                           XXXXXXX, JS_0,       \
                                                                     KC_F12      \
   ),
 
@@ -442,7 +442,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   KC_SPC,     KC_F,          KC_T,          LALT(KC_7), XXXXXXX,     \
     XXXXXXX,   KC_Z,      LALT(KC_0), LALT(KC_6),    LALT(KC_MINUS),XXXXXXX,    XXXXXXX,     \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,       KC_UNDS,                   TO(RDM),     \
-                                                                    KC_MINUS,   JS_BUTTON0,  \
+                                                                    KC_MINUS,   JS_0,        \
                                                                                 KC_F12       \
   ),
 
@@ -466,7 +466,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   KC_SPC,     KC_F,       KC_T,       LALT(KC_3), XXXXXXX,     \
     XXXXXXX,   XXXXXXX,   LALT(KC_9), KC_ASTR,    LALT(KC_5), LALT(KC_2), XXXXXXX,     \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    LALT(KC_1),             TO(NIN),     \
-                                                              KC_Z,       JS_BUTTON0,  \
+                                                              KC_Z,       JS_0,        \
                                                                           KC_F12       \
   ),
 
@@ -490,7 +490,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,   XXXXXXX,   KC_SPC,     KC_F,       KC_T,       LALT(KC_2), XXXXXXX,     \
     XXXXXXX,   LALT(KC_0),LALT(KC_7), LALT(KC_4), LALT(KC_1), XXXXXXX,    XXXXXXX,     \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    KC_9,                   TO(RGB),     \
-                                                              XXXXXXX,    JS_BUTTON0,  \
+                                                              XXXXXXX,    JS_0,        \
                                                                           KC_F12       \
   ),
 
@@ -514,7 +514,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_MOD,   RGBRST,    KC_SPC,     KC_F,       KC_T,       XXXXXXX,    XXXXXXX,     \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,     \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX,                TO(SAM),     \
-                                                              XXXXXXX,    JS_BUTTON0,  \
+                                                              XXXXXXX,    JS_0,        \
                                                                           XXXXXXX      \
   ),
 
@@ -561,7 +561,6 @@ void matrix_scan_user(void) {
             arrows[3] = false;
             unregister_code16(KC_W); 
         }
-        joystick_status.status |= JS_UPDATED;
     
 }
 

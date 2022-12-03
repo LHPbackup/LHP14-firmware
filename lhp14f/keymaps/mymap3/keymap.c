@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_A,      XXXXXXX,   KC_SPC,     KC_F,       KC_T,       LALT(KC_4), KC_D,      \
     XXXXXXX,   KC_Z,      LALT(KC_6), LALT(KC_5), LALT(KC_1), LCA(KC_7),  XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    KC_S,       KC_7,                   TO(SAM),   \
-                                                              LALT(KC_0), JS_BUTTON0,\
+                                                              LALT(KC_0), JS_0,      \
                                                                           KC_F12     \
    ),
 
@@ -136,16 +136,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 
-joystick_config_t joystick_axes[JOYSTICK_AXES_COUNT] = {
-    [0] = JOYSTICK_AXIS_VIRTUAL,
-    [1] = JOYSTICK_AXIS_VIRTUAL
+joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
+     JOYSTICK_AXIS_VIRTUAL, // x
+     JOYSTICK_AXIS_VIRTUAL  // y
 };
 
 void matrix_scan_user(void) {
 
-    joystick_status.axes[0] = analogReadPin(F4)/4 - 128;
-    joystick_status.axes[1] = analogReadPin(D4)/4 - 128;
-    joystick_status.status |= JS_UPDATED;
+    joystick_set_axis(0,analogReadPin(F4)/4 - 128);
+    joystick_set_axis(1,analogReadPin(D4)/4 - 128);
+
 }
 
 

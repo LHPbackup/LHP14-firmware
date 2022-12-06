@@ -84,6 +84,46 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 
+
+
+void matrix_scan_user(void) {
+
+        if (!arrows[0] && analogReadPin(F4) - 512 > actuation){
+            arrows[0] = true;
+            register_code16(KC_D);
+        }
+        else if (arrows[0] &&  analogReadPin(F4) - 512 < actuation){
+            arrows[0] = false;
+            unregister_code16(KC_D);
+        }
+        if (!arrows[1] && analogReadPin(F4) - 512 < -actuation){
+            arrows[1] = true;
+            register_code16(KC_A);
+        }
+        else if (arrows[1] && analogReadPin(F4) - 512 > -actuation){
+            arrows[1] = false;
+            unregister_code16(KC_A);
+        }
+        if (!arrows[2] && analogReadPin(D4) - 512 > actuation){
+            arrows[2] = true;
+            register_code16(KC_S);
+        }
+        else if (arrows[2] &&  analogReadPin(D4) - 512 < actuation){
+            arrows[2] = false;
+            unregister_code16(KC_S);
+        }
+        if (!arrows[3] && analogReadPin(D4) - 512 < -actuation){
+            arrows[3] = true;
+            register_code16(KC_W);
+        }
+        else if (arrows[3] && analogReadPin(D4) - 512 > -actuation){
+            arrows[3] = false;
+            unregister_code16(KC_W); 
+        }
+}
+
+
+
 void render_layer(void) {
     oled_set_cursor(0, 3);
     // Host Keyboard Layer Status
@@ -170,6 +210,16 @@ bool oled_task_user(void) {
     render_logo();
     render_layer();
     return false;
+}
+
+
+
+void suspend_power_down_kb(void) {
+    oled_off();
+}
+
+void suspend_wakeup_init_kb(void) {
+    oled_on();
 }
 
 
@@ -521,48 +571,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
-
-
-
-
-
-void matrix_scan_user(void) {
-
-
-        if (!arrows[0] && analogReadPin(F4) - 512 > actuation){
-            arrows[0] = true;
-            register_code16(KC_D);
-        }
-        else if (arrows[0] &&  analogReadPin(F4) - 512 < actuation){
-            arrows[0] = false;
-            unregister_code16(KC_D);
-        }
-        if (!arrows[1] && analogReadPin(F4) - 512 < -actuation){
-            arrows[1] = true;
-            register_code16(KC_A);
-        }
-        else if (arrows[1] && analogReadPin(F4) - 512 > -actuation){
-            arrows[1] = false;
-            unregister_code16(KC_A);
-        }
-        if (!arrows[2] && analogReadPin(D4) - 512 > actuation){
-            arrows[2] = true;
-            register_code16(KC_S);
-        }
-        else if (arrows[2] &&  analogReadPin(D4) - 512 < actuation){
-            arrows[2] = false;
-            unregister_code16(KC_S);
-        }
-        if (!arrows[3] && analogReadPin(D4) - 512 < -actuation){
-            arrows[3] = true;
-            register_code16(KC_W);
-        }
-        else if (arrows[3] && analogReadPin(D4) - 512 > -actuation){
-            arrows[3] = false;
-            unregister_code16(KC_W); 
-        }
-    
-}
 
 
 

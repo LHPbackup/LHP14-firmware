@@ -157,7 +157,7 @@ joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
 void matrix_scan_user(void) {
 
     joystick_set_axis(0,analogReadPin(F4)/4 - 128);
-    joystick_set_axis(1,analogReadPin(F5)/4 - 128);
+    joystick_set_axis(1,analogReadPin(F5)/4 - 128);  // if you use LHP14F or previous version, analogReadPin(D4)
 
     if ((repeat_sd) && (timer_elapsed(timer_sd) > 50)) {		//If "repeat_sd" is true and 50 ms has elapsed
          tap_code(KC_EQL);						//Type key you want to repeat

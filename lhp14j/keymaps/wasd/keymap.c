@@ -104,7 +104,7 @@ void matrix_scan_user(void) {
             arrows[1] = false;
             unregister_code16(KC_A);
         }
-        if (!arrows[2] && analogReadPin(F5) - 512 > actuation){
+        if (!arrows[2] && analogReadPin(F5) - 512 > actuation){    // if you use LHP14F or previous version, analogReadPin(D4)
             arrows[2] = true;
             register_code16(KC_S);
         }

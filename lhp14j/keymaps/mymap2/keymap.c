@@ -1113,7 +1113,7 @@ joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
 void matrix_scan_user(void) {
 
     joystick_set_axis(0,analogReadPin(F4)/4 - 128);
-    joystick_set_axis(1,analogReadPin(F5)/4 - 128);
+    joystick_set_axis(1,analogReadPin(F5)/4 - 128);  // if you use LHP14F or previous version, analogReadPin(D4)
 
 }
 

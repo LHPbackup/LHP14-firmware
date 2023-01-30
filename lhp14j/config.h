@@ -94,6 +94,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define OLED_TIMEOUT 0
 
-#define OLED_FONT_H "keyboards/lhp14f/glcdfont_lhp14.c"
+#define OLED_FONT_H "keyboards/lhp14j/glcdfont_lhp14.c"
 
 #define LAYER_STATE_32BIT

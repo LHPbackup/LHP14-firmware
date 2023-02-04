@@ -10,7 +10,8 @@
 
 
 #define MATRIX_ROW_PINS { GP6, GP7, GP8, GP9 }
-#define MATRIX_COL_PINS { GP4, GP27, GP26, GP22, GP20, GP23, GP21, GP5, GP1 }
+#define MATRIX_COL_PINS { GP4, GP27, GP26, GP22, GP20, GP23, GP21, GP5, GP1 }  // SparkFun ProMicro RP2040
+//#define MATRIX_COL_PINS { GP4, GP27, GP26, GP18, GP20, GP19, GP10, GP5, GP1 }  // Adafruit KB2040
 
 #define DIODE_DIRECTION COL2ROW
 
@@ -20,8 +21,11 @@
 //#define LOCKING_RESYNC_ENABLE
 
 /* ws2812 RGB LED */
-#define RGB_DI_PIN GP0 // GP25>>>ProMicroRP2040 onboard LED (RGBLED_NUM 1)
-#define RGBLED_NUM 28 // Number of LEDs. Tape LED >>> RGBLED_NUM 6   no LED >>> RGBLED_NUM 0
+#define RGB_DI_PIN GP0
+//#define RGB_DI_PIN GP25 //SparkFun ProMicro RP2040 onboard LED
+//#define RGB_DI_PIN GP17 //Adafruit KB2040 onboard LED
+
+#define RGBLED_NUM 28 // Number of LEDs. Tape LED >>> RGBLED_NUM 6   onboard LED >>> RGBLED_NUM 1
 
 #if  RGBLED_NUM == 28
   #define LED_LAYOUT( \

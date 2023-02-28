@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "config_common.h"
+//#include "config_common.h"
 
 #define MATRIX_ROWS 4
 #define MATRIX_COLS 9
@@ -89,6 +89,6 @@
 #define OLED_DISPLAY_128X32
 #define I2C1_SCL_PIN GP3
 #define I2C1_SDA_PIN GP2
-#define I2C_DRIVER I2CD2
+#define I2C_DRIVER I2CD1
 #define OLED_BRIGHTNESS 128
 

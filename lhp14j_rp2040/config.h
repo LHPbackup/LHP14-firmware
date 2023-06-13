@@ -21,7 +21,7 @@
 //#define LOCKING_RESYNC_ENABLE
 
 /* ws2812 RGB LED */
-#define RGB_DI_PIN GP0
+//#define RGB_DI_PIN GP0
 //#define RGB_DI_PIN GP25 //SparkFun ProMicro RP2040 onboard LED
 //#define RGB_DI_PIN GP17 //Adafruit KB2040 onboard LED
 
@@ -47,7 +47,7 @@
     21, 22, 23, 24, 25, 26, 27)   
 #endif
 
- #ifdef RGB_DI_PIN
+// #ifdef RGB_DI_PIN
    #define RGBLIGHT_HUE_STEP 8
    #define RGBLIGHT_SAT_STEP 8
    #define RGBLIGHT_VAL_STEP 8
@@ -66,7 +66,7 @@
    #define RGBLIGHT_EFFECT_RGB_TEST
    //#define RGBLIGHT_EFFECT_ALTERNATING
    //#define RGBLIGHT_EFFECT_TWINKLE
- #endif
+// #endif
 
 
 

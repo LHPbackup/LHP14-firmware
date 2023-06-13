@@ -16,7 +16,6 @@ SLEEP_LED_ENABLE = no      # Breathing sleep LED during USB suspend
 NKRO_ENABLE = no           # USB Nkey Rollover
 BACKLIGHT_ENABLE = no      # Enable keyboard backlight functionality
 
-WS2812_DRIVER = vendor
 RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
 
 MIDI_ENABLE = no           # MIDI support

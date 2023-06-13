@@ -36,8 +36,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define LOCKING_RESYNC_ENABLE
 
 /* ws2812 RGB LED */
-#define RGB_DI_PIN D3
-#define RGBLED_NUM 28 // Number of LEDs. Tape LED >>> RGBLED_NUM 6   no LED >>> RGBLED_NUM 0
+//#define RGB_DI_PIN D3
+#define RGBLED_NUM 28 // Number of LEDs. Tape LED >>> RGBLED_NUM 6
 
 #if  RGBLED_NUM == 28
   #define LED_LAYOUT( \
@@ -59,13 +59,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     21, 22, 23, 24, 25, 26, 27)   
 #endif
 
-#define RGBLIGHT_LED_MAP LED_LAYOUT( \
-  6,  5,  4,   3,  2,  1,  0,   \
-  7,  8,  9,  10, 11, 12, 13,   \
-  20, 19, 18, 17, 16, 15, 14,   \
-  21, 22, 23, 24, 25, 26, 27)   
-
- #ifdef RGB_DI_PIN
+// #ifdef RGB_DI_PIN
    #define RGBLIGHT_HUE_STEP 8
    #define RGBLIGHT_SAT_STEP 8
    #define RGBLIGHT_VAL_STEP 8
@@ -84,7 +78,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
    #define RGBLIGHT_EFFECT_RGB_TEST
    //#define RGBLIGHT_EFFECT_ALTERNATING
    //#define RGBLIGHT_EFFECT_TWINKLE
- #endif
+// #endif
 
 
 

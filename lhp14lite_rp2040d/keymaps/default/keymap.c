@@ -68,8 +68,10 @@ joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
 
 void matrix_scan_user(void) {
 
-    joystick_set_axis(0,170 - analogReadPin(GP28)/3);
-    joystick_set_axis(1,analogReadPin(GP29)/3 - 170);
+    // joystick_set_axis(0,170 - analogReadPin(GP28)/3);  // for N-Switch Joycon Repair Kit
+    // joystick_set_axis(1,analogReadPin(GP29)/3 - 170);
+    joystick_set_axis(0,128 - analogReadPin(GP28)/4);  // for Gulikit Hall Sensing Joystick
+    joystick_set_axis(1,analogReadPin(GP29)/4 - 128);
 
 }
 

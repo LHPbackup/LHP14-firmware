@@ -1,6 +1,6 @@
 {
   "keyboard_name": "LHP14j",
-  "manufacturer": "NeoTrinity",
+  "manufacturer": "TrinityIronworks",
   "usb": {
       "vid": "0xFF14",
       "pid": "0x0009",
@@ -8,9 +8,47 @@
   },
   "url": "",
   "maintainer": "NeoTrinity",
+  "bootloader": "caterina",
+  "processor": "atmega32u4",
+  "debounce": 5,
+  "diode_direction": "COL2ROW",
+  "matrix_pins": {
+      "cols": ["D4", "F6", "F7", "B1", "B3", "B2", "B6", "C6", "D2"],
+      "rows": ["D7", "E6", "B4", "B5"]
+  },
   "ws2812": {
       "pin": "D3",
   },
+  "features": {
+      "bootmagic": false,
+      "command": false,
+      "console": false,
+      "extrakey": false,
+      "mousekey": true,
+      "nkro": false,
+      "backlight": false,
+      "rgblight": true,
+      "oled": true
+  },
+  "rgblight": {
+      "hue_steps": 8,
+      "saturation_steps": 8,
+      "brightness_steps": 8,
+      "max_brightness": 120,
+      "sleep": true,
+      "animations": {
+          "alternating": false,
+          "breathing": false,
+          "christmas": false,
+          "knight": true,
+          "rainbow_mood": true,
+          "rainbow_swirl": true
+          "rgb_test": true,
+          "snake": true
+          "static_gradient": false,
+          "twinkle": false
+        }
+  }
   "layouts": {
     "LAYOUT": {
       "layout": [{"x":0, "y":0}, {"x":1, "y":0}, {"x":2, "y":0}, {"x":3, "y":0}, {"x":4, "y":0}, {"x":5, "y":0}, {"x":6, "y":0},

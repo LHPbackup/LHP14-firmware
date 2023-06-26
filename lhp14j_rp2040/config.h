@@ -3,28 +3,6 @@
 
 #pragma once
 
-//#include "config_common.h"
-
-#define MATRIX_ROWS 4
-#define MATRIX_COLS 9
-
-
-#define MATRIX_ROW_PINS { GP6, GP7, GP8, GP9 }
-#define MATRIX_COL_PINS { GP4, GP27, GP26, GP22, GP20, GP23, GP21, GP5, GP1 }  // SparkFun ProMicro RP2040
-//#define MATRIX_COL_PINS { GP4, GP27, GP26, GP18, GP20, GP19, GP10, GP5, GP1 }  // Adafruit KB2040
-
-#define DIODE_DIRECTION COL2ROW
-
-#define DEBOUNCE 5
-
-//#define LOCKING_SUPPORT_ENABLE
-//#define LOCKING_RESYNC_ENABLE
-
-/* ws2812 RGB LED */
-//#define RGB_DI_PIN GP0
-//#define RGB_DI_PIN GP25 //SparkFun ProMicro RP2040 onboard LED
-//#define RGB_DI_PIN GP17 //Adafruit KB2040 onboard LED
-
 #define RGBLED_NUM 28 // Number of LEDs. Tape LED >>> RGBLED_NUM 6   onboard LED >>> RGBLED_NUM 1
 
 #if  RGBLED_NUM == 28
@@ -44,32 +22,8 @@
     6,  5,  4,   3,  2,  1,  0,   \
     7,  8,  9,  10, 11, 12, 13,   \
     20, 19, 18, 17, 16, 15, 14,   \
-    21, 22, 23, 24, 25, 26, 27)   
+    21, 22, 23, 24, 25, 26, 27)    
 #endif
-
-// #ifdef RGB_DI_PIN
-   #define RGBLIGHT_HUE_STEP 8
-   #define RGBLIGHT_SAT_STEP 8
-   #define RGBLIGHT_VAL_STEP 8
-   #define RGBLIGHT_LIMIT_VAL 120 
-   #define RGBLIGHT_SLEEP  
- /*== all animations enable ==*/
-//   #define RGBLIGHT_ANIMATIONS
- /*== or choose animations ==*/
-   //#define RGBLIGHT_EFFECT_BREATHING
-   #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-   #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-   #define RGBLIGHT_EFFECT_SNAKE
-   #define RGBLIGHT_EFFECT_KNIGHT
-   //#define RGBLIGHT_EFFECT_CHRISTMAS
-   //#define RGBLIGHT_EFFECT_STATIC_GRADIENT
-   #define RGBLIGHT_EFFECT_RGB_TEST
-   //#define RGBLIGHT_EFFECT_ALTERNATING
-   //#define RGBLIGHT_EFFECT_TWINKLE
-// #endif
-
-
-
 
 #define JOYSTICK_BUTTON_COUNT 1
 #define JOYSTICK_AXIS_COUNT 2

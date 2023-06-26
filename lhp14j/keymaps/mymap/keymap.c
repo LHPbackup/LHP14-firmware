@@ -39,33 +39,18 @@ void render_logo(void) {
 }
 
 enum custom_keycodes {
-  SR_CS = SAFE_RANGE,
-  RR_RD,
-  RGBRST
+  SE_SH = SAFE_RANGE
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case SR_CS:
+     case SE_SH:
       if (record->event.pressed) {
-        SEND_STRING(SS_LALT("0") "-");
+         register_code(KC_LALT);
+           SEND_STRING(SS_DELAY(10) "4" SS_DELAY(10));
+           SEND_STRING(SS_DELAY(10) "9" SS_DELAY(10));
+         unregister_code(KC_LALT);
       }
-      break;
-    case RR_RD:
-      if (record->event.pressed) {
-        register_code(KC_LCTL);
-        SEND_STRING(SS_LALT("2"));
-        unregister_code(KC_LCTL);
-        SEND_STRING("5");
-      }
-      break;
-    case RGBRST:
-      #ifdef RGBLIGHT_ENABLE
-        if (record->event.pressed) {
-          eeconfig_update_rgblight_default();
-          rgblight_enable();
-        }
-      #endif
       break;
   }
   return true;

@@ -1,6 +1,6 @@
 {
   "keyboard_name": "LHP14j_RP2040",
-  "manufacturer": "NeoTrinity",
+  "manufacturer": "TrinityIronworks",
   "usb": {
       "vid": "0xFF14",
       "pid": "0x000A",
@@ -8,10 +8,51 @@
   },
   "url": "",
   "maintainer": "NeoTrinity",
+  "bootloader": "rp2040",
+  "processor": "RP2040",
+  "debounce": 5,
+  "diode_direction": "COL2ROW",
+  "matrix_pins": {
+    //"cols": ["GP4", "GP27", "GP26", "GP22", "GP20", "GP23", "GP21", "GP5", "GP1"],   // SparkFun ProMicro RP2040
+      "cols": ["GP4", "GP27", "GP26", "GP18", "GP20", "GP19", "GP10", "GP5", "GP1"],   // Adafruit KB2040
+      "rows": ["GP6", "GP7", "GP8", "GP9"]
+  },
   "ws2812": {
       "pin": "GP0",
+    //"pin": "GP25",  //SparkFun ProMicro RP2040 onboard LED
+    //"pin": "GP17",  //Adafruit KB2040 onboard LED
       "driver": "vendor"
   },
+  "features": {
+      "bootmagic": false,
+      "command": false,
+      "console": false,
+      "extrakey": false,
+      "mousekey": true,
+      "nkro": false,
+      "backlight": false,
+      "rgblight": true,
+      "oled": true
+  },
+  "rgblight": {
+      "hue_steps": 8,
+      "saturation_steps": 8,
+      "brightness_steps": 8,
+      "max_brightness": 120,
+      "sleep": true,
+      "animations": {
+          "alternating": false,
+          "breathing": false,
+          "christmas": false,
+          "knight": true,
+          "rainbow_mood": true,
+          "rainbow_swirl": true
+          "rgb_test": true,
+          "snake": true
+          "static_gradient": false,
+          "twinkle": false
+        }
+  }
   "layouts": {
     "LAYOUT": {
       "layout": [{"x":0, "y":0}, {"x":1, "y":0}, {"x":2, "y":0}, {"x":3, "y":0}, {"x":4, "y":0}, {"x":5, "y":0}, {"x":6, "y":0},

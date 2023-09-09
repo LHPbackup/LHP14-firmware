@@ -19,7 +19,7 @@
     L15, L16, L17, L18, L19   \
    }
 
-  #define RGBLIGHT_LED_MAP LED_LAYOUT( \
+  #define rgblight_led_map LED_LAYOUT( \
     0,  1,  2,   3,  4, \
     9,  8,  7,   6,  5, \
     10, 11, 12, 13, 14, \

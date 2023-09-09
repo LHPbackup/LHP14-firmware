@@ -18,7 +18,7 @@
     L21, L22, L23, L24, L25, L26, L27  \
    }
 
-  #define RGBLIGHT_LED_MAP LED_LAYOUT( \
+  #define rgblight_led_map LED_LAYOUT( \
     6,  5,  4,   3,  2,  1,  0,   \
     7,  8,  9,  10, 11, 12, 13,   \
     20, 19, 18, 17, 16, 15, 14,   \

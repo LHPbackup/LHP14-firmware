@@ -3,10 +3,6 @@
 
 #pragma once
 
-
-#define RGBLED_NUM 28 // Number of LEDs. Tape LED >>> RGBLED_NUM 6
-
-
 #define JOYSTICK_BUTTON_COUNT 1
 #define JOYSTICK_AXIS_COUNT 2
 

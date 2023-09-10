@@ -46,12 +46,13 @@
           "christmas": false,
           "knight": true,
           "rainbow_mood": true,
-          "rainbow_swirl": true
+          "rainbow_swirl": true,
           "rgb_test": true,
-          "snake": true
+          "snake": true,
           "static_gradient": false,
-          "twinkle": false
+          "twinkle": false,
         }
+      "led_map": [0, 1, 2, 3, 4, 9, 8, 7, 6, 5, 10, 11, 12, 13, 14, 19, 18, 17, 16, 15]
   }
   "layouts": {
     "LAYOUT": {

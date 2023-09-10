@@ -48,6 +48,7 @@
           "static_gradient": false,
           "twinkle": false,
         }
+      "led_count": 20,  // Number of LEDs. Tape LED >>> 6   onboard LED >>> 1
       "led_map": [0, 1, 2, 3, 4, 9, 8, 7, 6, 5, 10, 11, 12, 13, 14, 19, 18, 17, 16, 15]
   }
   "layouts": {

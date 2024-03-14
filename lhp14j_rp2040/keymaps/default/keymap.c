@@ -298,7 +298,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------|   
    * |  A   |心眼  |Space |ﾀｹﾞ替 |ﾀｹﾞ近 |閃影照|  D   |   
    * |------+------+------+------+------+------+------|   
-   * |心眼  |葉隠  |意気衝|ｱﾑﾚﾝ  |明鏡  |薬1   |      |   
+   * |ｺﾝact1|葉隠  |意気衝|ｱﾑﾚﾝ  |明鏡  |薬1   |      |   
    * |------+------+------+------+------+-------------'   
    * | GG   |      |ｺﾝact2|  S   |夜天  |      | SCH  |   
    * `----------------------------------+-------------.   
@@ -310,7 +310,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    [SAM] = LAYOUT( \
     KC_Z,        KC_F2,     KC_W,        LALT(KC_1),LALT(KC_4),   KC_PLUS,    KC_V,      \
     KC_A,        KC_HASH,   KC_SPC,      KC_F,      KC_T,         SE_SH,      KC_D,      \
-    KC_HASH,     LALT(KC_5),LALT(KC_2),  KC_AMPR,   KC_ASTR,      RPT_POT,    XXXXXXX,   \
+    KC_Z,        LALT(KC_5),LALT(KC_2),  KC_AMPR,   KC_ASTR,      RPT_POT,    XXXXXXX,   \
     LCA(KC_MINS),XXXXXXX,   LCA(KC_MINS),KC_S,      LALT(KC_MINS),            TO(SCH),   \
                                                                   LALT(KC_3), KC_HASH,   \
                                                                               KC_F12     \
@@ -326,7 +326,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+-------------'   
    * |      |      |      |   S  |応急  |      | SGE  |   
    * `----------------------------------+-------------.   
-   *                                    |ｾﾗ+ｺﾝｿ|JSPush|   
+   *                                    |ｾﾗ+ｺﾝｿ|転化  |   
    *                                    `------+------.   
    *                                           |  LB  |   
    *                                           `------'   
@@ -336,7 +336,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_A,      XXXXXXX,   KC_SPC,     KC_F,       KC_T,       LALT(KC_4), KC_D,      \
     XXXXXXX,   KC_Z,      LALT(KC_6), LALT(KC_5), LALT(KC_1), LCA(KC_7),  XXXXXXX,   \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    KC_S,       KC_7,                   TO(SGE),   \
-                                                              LALT(KC_0), JS_0,      \
+                                                              LALT(KC_0), LCA(KC_7), \
                                                                           KC_F12     \
   ),
 
@@ -484,7 +484,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,     XXXXXXX, KC_SPC,       KC_F,       KC_T,       LALT(KC_3), XXXXXXX,   \
     XXXXXXX,     XXXXXXX, LALT(KC_UNDS),LALT(KC_9), LALT(KC_5), XXXXXXX,    XXXXXXX,   \
     XXXXXXX,     XXXXXXX, XXXXXXX,      XXXXXXX,    LALT(KC_1),             TO(DNC),   \
-                                                                XXXXXXX,    JS_0,      \
+                                                                XXXXXXX,    LALT(KC_7),\
                                                                             KC_F12     \
   ),
 
@@ -520,9 +520,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------+------|   
    * |      |ｺﾝact1|Bﾋｰﾀｰ |ｱﾑﾚﾝ  |HC_HB |      |      |   
    * |------+------+------+------+------+-------------'   
-   * |      |      |      |      |      |      | WHM  |   
+   * |      |      |      |      |ﾀｸﾃｨ  |      | WHM  |   
    * `----------------------------------+-------------.   
-   *                                    |      |JSPush|   
+   *                                    |ﾎﾟﾝﾌﾞﾚ|JSPush|   
    *                                    `------+------.   
    *                                           |  LB  |   
    *                                           `------'   
@@ -531,8 +531,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,  XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,   KC_F1,   XXXXXXX,    \
     XXXXXXX,  XXXXXXX,   KC_SPC,    KC_F,       KC_T,      KC_ASTR, XXXXXXX,    \
     XXXXXXX,  KC_Z,      LALT(KC_4),LALT(KC_5), HC_HB,     XXXXXXX, XXXXXXX,    \
-    XXXXXXX,  XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,            TO(WHM),    \
-                                                           XXXXXXX, JS_0,       \
+    XXXXXXX,  XXXXXXX,   XXXXXXX,   XXXXXXX,    LALT(KC_2),         TO(WHM),    \
+                                                           LALT(KC_3), JS_0,    \
                                                                     KC_F12      \
   ),
 

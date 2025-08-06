@@ -1,6 +1,18 @@
+// Copyright 2025 Neo Trinity
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 #include QMK_KEYBOARD_H
 #include "joystick.h"
 #include "analog.h"
+
+// ADC Measured value
+#define min_x 139
+#define med_x 329
+#define max_x 521
+
+#define min_y 139
+#define med_y 339
+#define max_y 543
 
 // Layer(=job) MAX 32jobs available
 #define DRK 0
@@ -44,7 +56,7 @@
 void render_logo(void) {
     oled_set_cursor(0, 0);
     oled_write_P(lhp_logo, false);
-}
+};
 
 enum custom_keycodes {
   RGBRST = SAFE_RANGE,
@@ -62,22 +74,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
   }
   return true;
-}
+};
+
 
 
 joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
-     JOYSTICK_AXIS_VIRTUAL, // x
-     JOYSTICK_AXIS_VIRTUAL  // y
+    [0] = JOYSTICK_AXIS_IN(GP28, max_x, med_x, min_x),
+    [1] = JOYSTICK_AXIS_IN(GP29, min_y, med_y, max_y),
 };
-
-void matrix_scan_user(void) {
-
-    // joystick_set_axis(0,170 - analogReadPin(GP28)/3);  // for N-Switch Joycon Repair Kit
-    // joystick_set_axis(1,analogReadPin(GP29)/3 - 170);
-    joystick_set_axis(0,128 - analogReadPin(GP28)/4);  // for Gulikit Hall Sensing Joystick
-    joystick_set_axis(1,analogReadPin(GP29)/4 - 128);
-
-}
 
 
 
@@ -247,21 +251,21 @@ void render_layer(void) {
             // Or use the write_ln shortcut over adding '\n' to the end of your string
             oled_write_ln_P(PSTR("Undefined"), false);
     }
-}
+};
 
 bool oled_task_user(void) {
     render_logo();
     render_layer();
     return false;
-}
+};
 
 void suspend_power_down_kb(void) {
     oled_off();
-}
+};
 
 void suspend_wakeup_init_kb(void) {
     oled_on();
-}
+};
 
 
 

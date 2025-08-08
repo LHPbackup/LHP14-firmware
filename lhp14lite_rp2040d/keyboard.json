@@ -13,8 +13,8 @@
   "debounce": 5,
   "diode_direction": "COL2ROW",
   "matrix_pins": {
-      "cols": ["GP27", "GP26", "GP22", "GP20", "GP23", "GP21", "GP9"],   // SparkFun ProMicro RP2040
-    //"cols": ["GP27", "GP26", "GP18", "GP20", "GP19", "GP10", "GP9"],   // Adafruit KB2040
+    //"cols": ["GP27", "GP26", "GP22", "GP20", "GP23", "GP21", "GP9"],   // SparkFun ProMicro RP2040
+      "cols": ["GP27", "GP26", "GP18", "GP20", "GP19", "GP10", "GP9"],   // Adafruit KB2040
       "rows": ["GP5", "GP6", "GP7", "GP8"]
   },
   "ws2812": {

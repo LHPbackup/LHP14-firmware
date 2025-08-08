@@ -51,18 +51,16 @@ joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
 void render_layer(void) {
 
     oled_set_cursor(0, 0);
-    oled_write_P(PSTR("X:"), false);
     uint16_t val = analogReadPin(F5);
-    char val_str[4];
-    itoa(val, val_str, 10);
+    char val_str[9];
+    sprintf(val_str, "X:%-4d", val);
     oled_write(val_str, false);
     oled_set_cursor(0, 1);
-    oled_write_P(PSTR("Y:"), false);
     val = analogReadPin(F4);
-    itoa(val, val_str, 10);
+    sprintf(val_str, "Y:%-4d", val);
     oled_write(val_str, false);
     
-    // special thanks marusii and HellSingCoder
+    // special thanks marusii
 
 
     oled_set_cursor(0, 3);

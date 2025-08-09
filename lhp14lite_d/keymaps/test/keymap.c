@@ -50,14 +50,48 @@ joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
 
 void render_layer(void) {
 
+    char val_str[20];
+    
     oled_set_cursor(0, 0);
     uint16_t val = analogReadPin(F5);
-    char val_str[9];
+    static uint16_t min_xx = 1023;
+    static uint16_t max_xx = 0;
+      
+      if (val > max_xx) {
+         max_xx = val;
+      };
+      
+      if (val < min_xx) {
+         min_xx = val;
+      };
+
+    
     sprintf(val_str, "X:%-4d", val);
     oled_write(val_str, false);
+    sprintf(val_str, " min%-4d", min_xx);
+    oled_write(val_str, false);
+    sprintf(val_str, "max%-4d", max_xx);
+    oled_write(val_str, false);
+    
+    
     oled_set_cursor(0, 1);
     val = analogReadPin(F4);
+    static uint16_t min_yy = 1023;
+    static uint16_t max_yy = 0;
+      
+      if (val > max_yy) {
+         max_yy = val;
+      };
+      
+      if (val < min_yy) {
+         min_yy = val;
+      };
+
     sprintf(val_str, "Y:%-4d", val);
+    oled_write(val_str, false);
+    sprintf(val_str, " min%-4d", min_yy);
+    oled_write(val_str, false);
+    sprintf(val_str, "max%-4d", max_yy);
     oled_write(val_str, false);
     
     // special thanks marusii

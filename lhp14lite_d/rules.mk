@@ -1,4 +1,4 @@
 JOYSTICK_ENABLE = yes
 JOYSTICK_DRIVER = analog
-
+LTO_ENABLE = yes
 

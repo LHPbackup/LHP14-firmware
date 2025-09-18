@@ -6,13 +6,13 @@
 #include "analog.h"
 
 // ADC Measured value
-#define min_x 139
+#define min_x 138
 #define med_x 329
 #define max_x 521
 
-#define min_y 139
+#define min_y 127
 #define med_y 339
-#define max_y 543
+#define max_y 549
 
 
 #define SAM 0
@@ -273,7 +273,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* WHM
    * ,----------------------------------.   
-   * |ｺﾝact1|   W  |ﾍﾞﾆｿﾝT|ﾃﾝﾊﾟ  |救出  |   
+   * |ｺﾝact1|   W  |ｴｰﾃﾘｱﾙ|ﾃﾝﾊﾟ  |救出  |   
    * |------+------+------+------+------|   
    * |      |Space |ﾀｹﾞ替 |ﾀｹﾞ近 |ﾙｰｼｯﾄﾞ|   
    * |------+------+------+------+------|   
@@ -283,10 +283,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `------------------------------------------------'  
    */
   [WHM] = LAYOUT( \
-    KC_Z,       KC_W,       LALT(KC_EQUAL),LALT(KC_5),    LALT(KC_4), \
-    XXXXXXX,    KC_SPC,     KC_F,          KC_T,          LALT(KC_8), \
-    XXXXXXX,    LALT(KC_0), LALT(KC_6),    LALT(KC_MINUS),XXXXXXX,    \
-    XXXXXXX,    XXXXXXX,    XXXXXXX,       LALT(KC_7),    XXXXXXX,    JS_0,  TO(RDM) \
+    KC_Z,       KC_W,       KC_PLUS,       LALT(KC_5), LALT(KC_4),     \
+    XXXXXXX,    KC_SPC,     KC_F,          KC_T,       LALT(KC_MINUS), \
+    XXXXXXX,    LALT(KC_0), LALT(KC_6),    LALT(KC_7), XXXXXXX,        \
+    XXXXXXX,    XXXXXXX,    XXXXXXX,       KC_UNDS,    XXXXXXX,        JS_0,  TO(RDM) \
   ),
 
   /* RDM
@@ -355,8 +355,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `------------------------------------------------'  
    */
   [RGB] = LAYOUT( \
-    RGB_TOG,   RGB_HUI,   RGB_HUD,    RGB_SAI,    RGB_SAD, \
-    RGB_MOD,   RGBRST,    RGB_VAI,    RGB_VAD,    XXXXXXX, \
+    UG_TOGG,   UG_HUEU,   UG_HUED,    UG_SATU,    UG_SATD, \
+    UG_NEXT,   RGBRST,    UG_VALU,    UG_VALD,    XXXXXXX, \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX, \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX, JS_0,  TO(SAM) \
   ),

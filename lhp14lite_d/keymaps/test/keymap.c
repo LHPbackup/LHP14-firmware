@@ -6,13 +6,16 @@
 #include "analog.h"
 
 // ADC Measured value
-#define min_x 139
-#define med_x 329
-#define max_x 521
+#define min_x 150
+#define med_x 479
+#define max_x 782
 
-#define min_y 139
-#define med_y 339
-#define max_y 543
+#define min_y 200
+#define med_y 598
+#define max_y 989
+
+#define adc_x F5
+#define adc_y F4
 
 
 #define TST 0
@@ -42,8 +45,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 };
 
 joystick_config_t joystick_axes[JOYSTICK_AXIS_COUNT] = {
-    [0] = JOYSTICK_AXIS_IN(F5, max_x, med_x, min_x),
-    [1] = JOYSTICK_AXIS_IN(F4, min_y, med_y, max_y),
+    [0] = JOYSTICK_AXIS_IN(adc_x, max_x, med_x, min_x),
+    [1] = JOYSTICK_AXIS_IN(adc_y, min_y, med_y, max_y),
 };
 
 
@@ -53,7 +56,7 @@ void render_layer(void) {
     char val_str[20];
     
     oled_set_cursor(0, 0);
-    uint16_t val = analogReadPin(F5);
+    uint16_t val = analogReadPin(adc_x);
     static uint16_t min_xx = 1023;
     static uint16_t max_xx = 0;
       
@@ -75,7 +78,7 @@ void render_layer(void) {
     
     
     oled_set_cursor(0, 1);
-    val = analogReadPin(F4);
+    val = analogReadPin(adc_y);
     static uint16_t min_yy = 1023;
     static uint16_t max_yy = 0;
       
@@ -104,7 +107,7 @@ void render_layer(void) {
     switch (get_highest_layer(layer_state)) {
         case TST:
             oled_write_P(PSTR("KEY TEST\n"), false);
-            rgblight_sethsv(0, 255, 180);
+            //rgblight_sethsv(0, 255, 180);
             break;
         case RGB:
             oled_write_P(PSTR("RGB LED TEST\n"), false);
@@ -165,12 +168,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------|   
    * |      |      |      |      |      |   
    * |------+------+------+------+------+------+------.  
-   * |      |      |      |      |      |JsPush|SAM   |  
+   * |      |      |      |      |      |JsPush|TST   |  
    * `------------------------------------------------'  
    */
   [RGB] = LAYOUT( \
-    RGB_TOG,   RGB_HUI,   RGB_HUD,    RGB_SAI,    RGB_SAD, \
-    RGB_MOD,   RGBRST,    RGB_VAI,    RGB_VAD,    XXXXXXX, \
+    UG_TOGG,   UG_HUEU,   UG_HUED,    UG_SATU,    UG_SATD, \
+    UG_NEXT,   RGBRST,    UG_VALU,    UG_VALD,    XXXXXXX, \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX, \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX, JS_0,  TO(TST) \
   ),

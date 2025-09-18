@@ -170,8 +170,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `------------------------------------------------'  
    */
   [RGB] = LAYOUT( \
-    RGB_TOG,   RGB_HUI,   RGB_HUD,    RGB_SAI,    RGB_SAD, \
-    RGB_MOD,   RGBRST,    RGB_VAI,    RGB_VAD,    XXXXXXX, \
+    UG_TOGG,   UG_HUEU,   UG_HUED,    UG_SATU,    UG_SATD, \
+    UG_NEXT,   RGBRST,    UG_VALU,    UG_VALD,    XXXXXXX, \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX, \
     XXXXXXX,   XXXXXXX,   XXXXXXX,    XXXXXXX,    XXXXXXX, JS_0,  TO(TST) \
   ),
